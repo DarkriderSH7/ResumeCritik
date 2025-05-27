@@ -3,12 +3,12 @@ import PyPDF2
 import io
 import os
 import google.generativeai as genai
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
-load_dotenv()
+# load_dotenv()
 
 # Configure the Gemini API
-gemini_api_key = os.getenv("GEMINI_API_KEY")
+gemini_api_key = st.secrets["GEMINI_API_KEY"]
 genai.configure(api_key=gemini_api_key)
 
 st.set_page_config(page_title="AI Resume Critik", page_icon="📄", layout="centered" )
